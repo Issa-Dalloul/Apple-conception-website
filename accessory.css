@@ -1,0 +1,569 @@
+body {
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+.logo {
+  width: 95px;
+  position: fixed;
+  left: 0;
+  height: auto;
+  margin-bottom: 4px;
+  margin-top: 5px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1px 7%;
+  align-items: center;
+  z-index: 1000;
+}
+nav ul {
+  display: block;
+  list-style: none;
+  float: right;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  left: 177%;
+}
+nav ul li {
+  position: relative;
+  float: left;
+}
+nav ul li a:after {
+  display: block;
+}
+nav ul li a {
+  font-size: 20px;
+  padding: 20px;
+  color: var(--primary-color);
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+  box-sizing: border-box;
+  margin-right: -8px;
+}
+nav ul li a:before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.331);
+  transition: width 0.3s ease;
+  margin-right: 10px;
+  width: 0;
+}
+nav ul li a:hover:before {
+  width: 70%;
+}
+nav ul li:focus-within > ul,
+nav ul li:hover > ul {
+  display: initial;
+}
+.container {
+  width: 100;
+  height: 88vh;
+  background-image: url(./images/bbb.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.LVS {
+  font-weight: 100;
+  color: aliceblue;
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-left: 18px;
+}
+.row {
+  display: flex;
+  height: 88%;
+  align-items: center;
+  margin-top: 40px;
+}
+.col {
+  flex-basis: 50%;
+  margin-top: 20px;
+  width: 40px;
+  display: flex;
+  margin-left: 20%;
+}
+h2 {
+  color: rgb(4, 85, 248);
+  font-size: 100px;
+}
+.LVSP {
+  color: white;
+  line-height: 20px;
+  font-size: larger;
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-left: -12px;
+}
+.card1 {
+  height: 200px;
+  width: 200px;
+  color: black;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25p;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-position: 0%;
+  background-size: cover;
+  transition: transform 0.5;
+  box-shadow: 16px 14px 20px #0000008c;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card1::before {
+  content: "";
+  background: conic-gradient(#ff2323 20deg, transparent 120deg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: rotate 2s linear infinite;
+}
+.card1::after {
+  content: "Covers & Cases";
+  width: 192px;
+  height: 185px;
+  background-color: rgb(255, 255, 255);
+  background-image: url(./images/covers.jpg);
+  background-size: cover;
+  position: absolute;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.card2 {
+  height: 200px;
+  width: 200px;
+  color: black;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25p;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-position: 0%;
+  background-size: cover;
+  transition: transform 0.5;
+  box-shadow: 16px 14px 20px #0000008c;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card2::before {
+  content: "";
+  background: conic-gradient(#23d7ff 20deg, transparent 120deg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: rotate 2s linear infinite;
+}
+.card2::after {
+  content: "Power & Cables";
+  width: 192px;
+  height: 185px;
+  background-color: rgb(255, 255, 255);
+  background-image: url(./images/power.jpg);
+  background-size: cover;
+  position: absolute;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.card3 {
+  height: 200px;
+  width: 200px;
+  color: black;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25p;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-position: 0%;
+  background-size: cover;
+  transition: transform 0.5;
+  box-shadow: 16px 14px 20px #0000008c;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card3::before {
+  content: "";
+  background: conic-gradient(#4e8984 20deg, transparent 120deg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: rotate 2s linear infinite;
+}
+.card3::after {
+  content: "Sound Essentials";
+  width: 192px;
+  height: 185px;
+  background-color: rgb(255, 255, 255);
+  background-image: url(./images/oooo.png);
+  background-size: cover;
+  position: absolute;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.ccc {
+  margin-left: 21%;
+  font-size: 360%;
+  font-weight: 100;
+  font-kerning: normal;
+}
+
+.card:hover {
+  transform: translate(-10px);
+}
+.formh2 {
+  color: black;
+  margin-left: 30%;
+  font-size: xx-large;
+}
+.col1 {
+  font-size: larger;
+  margin-bottom: 10%;
+}
+.formh22 {
+  color: black;
+  margin-left: 40%;
+}
+.CC {
+  margin-top: 5%;
+  margin-left: 10%;
+  font-size: larger;
+  font-style: oblique;
+}
+.ll {
+  border-radius: 3%;
+}
+.ben {
+  margin-left: 14%;
+}
+.new {
+  margin-left: 48%;
+  font-size: xx-large;
+  color: #050f12;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+    -2px -2px 4px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 0, 255, 0.5),
+    3px 3px 6px rgba(0, 0, 0, 0.3), -3px -3px 6px rgba(255, 255, 255, 0.3),
+    0 0 20px rgba(0, 255, 0, 0.5), 4px 4px 8px rgba(0, 0, 0, 0.2),
+    -4px -4px 8px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 0, 0, 0.5),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-left: -6%;
+}
+.content {
+  width: 20%;
+  margin: 12px;
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  padding-top: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0, 25) 0 10px 10px rgba(0, 0, 0, 0, 22);
+  transition: 0.4s;
+  background: #f2f2f2;
+}
+.content:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0, 16) 0 3px 6px rgba(0, 0, 0, 0, 23);
+  transform: translate(0px, -8px);
+}
+img {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+p {
+  text-align: center;
+  color: #b2bec3;
+  padding-top: 0 8px;
+}
+h6 {
+  font-size: 26px;
+  text-align: center;
+  color: #222f3e;
+  margin: 0;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+}
+li {
+  padding-top: 5px;
+}
+.fa {
+  font-size: 26px;
+  transition: 0.4s;
+  margin: 3px;
+}
+.checked {
+  color: #ff9f43;
+}
+.fa:hover {
+  transform: scale(1.3);
+  transition: 0.6s;
+}
+button {
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  outline: none;
+  margin-top: 5px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.buy-1 {
+  background: #be7bb5;
+}
+.buy-2 {
+  background: #cb956e;
+}
+.buy-3 {
+  background: #a6c4a1;
+}
+.buy-4 {
+  background: #dced8e;
+}
+.buy-5 {
+  background: #666487;
+}
+.buy-6 {
+  background: #b7685b;
+}
+.buy-7 {
+  background: #212c1cc6;
+}
+.buy-8 {
+  background: #c19986;
+}
+.buy-9 {
+  background: #9377c2;
+}
+.buy-9 {
+  background: #b38dae;
+}
+.buy-10 {
+  background: #98ca8e;
+}
+.buy-11 {
+  background: #aad4a2;
+}
+.buy-12 {
+  background: #b962ad;
+}
+.buy-13 {
+  background: #9a9ddb;
+}
+.buy-14 {
+  background: #4e5152;
+}
+.buy-15 {
+  background: rgba(9, 10, 9, 0.094);
+}
+.buy-16 {
+  background: #e285ab;
+}
+.buy-17 {
+  background: rgba(231, 121, 176, 0.633);
+}
+.buy-100 {
+  background: rgba(210, 201, 205, 0.633);
+}
+.buy-110 {
+  background: rgba(103, 128, 187, 0.633);
+}
+
+@media (max-width: 1000px) {
+  .content {
+    width: 45px;
+  }
+}
+@media (max-width: 750px) {
+  .content {
+    width: 100;
+  }
+}
+.cc1 {
+  margin-left: 11%;
+  font-size: 340%;
+  font-weight: 100;
+  font-kerning: normal;
+}
+.footer {
+  box-sizing: border-box;
+  padding: 70px 0;
+}
+.colf .socailinks a {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 19px 19px 19px 0;
+  color: black;
+  transition: 0.2ss ease;
+}
+.colf .socailinks a:hover {
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+}
+.line {
+  border-top: 1px inset black;
+}
+
+.ulf {
+  list-style: none;
+}
+.colf {
+  width: 25%;
+  padding: 7 15px;
+  margin-top: 0;
+  margin-left: 5em;
+}
+.rowf {
+  display: flex;
+  flex-wrap: wrap;
+}
+.colf h4 {
+  font-size: 18px;
+  color: black;
+  margin-bottom: 10px;
+  font-weight: bold;
+  position: relative;
+  width: 80px;
+  border-bottom: 1px solid black;
+  border-width: 1px;
+}
+.colf ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: black;
+  margin-left: -2em;
+  font-weight: 300;
+  display: block;
+  margin-top: 4px;
+}
+.colf ul li a:hover {
+  padding-left: 8px;
+  font-weight: bold;
+}
+.copyright {
+  max-width: 1300px;
+  background-color: black;
+  padding: 25px 90px;
+  text-align: center;
+  color: #fff;
+  font-size: small;
+  margin-bottom: -6em;
+}
+.policy {
+  padding-top: 15%;
+  margin-left: 10%;
+  font-size: 18px;
+}
+.h1policy {
+  text-align: center;
+}
+.policyback {
+  border-radius: 8px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 150px;
+  font-weight: bold;
+  font-size: 20px;
+  opacity: 0.4;
+  margin-left: 45%;
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  background-color: black;
+}
+.policyback:hover {
+  scale: 1.1;
+  cursor: pointer;
+  transition: 0.5s ease;
+  background-color: grey;
+  color: black;
+}
+.footerimg {
+  width: 35px;
+}
+
+#navnav {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+}

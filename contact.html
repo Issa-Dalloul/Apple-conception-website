@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <title>APPLE </title>
+	<link rel="icon" type="image/x-icon" href="file:///C:/Users/user/Downloads/apple-13.svg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="contact.css">
+    </head>
+        <style> 
+          .header {
+             margin-top:30px;
+             position: absolute;
+             text-align: center;
+             width: 60%;
+             margin-left: 20%;
+             margin-top: 8em;
+            border-bottom: 1px inset black;
+          }
+         .headerh1 , .headerp , .content section, .content section h2 , .content section p , .legend , .copyright{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;}
+        .headerh1 {
+             font-size: 25px;
+             color: black;
+             box-sizing: border-box;
+             margin: 0;
+            padding: 0;
+        }
+         .headerp{
+             font-size:17px;
+            text-align: center;
+            margin-top:-8px;
+        }
+
+        </style>
+    </head>
+    <body style="background-color: white;">
+        
+        <main>
+            <header>
+              
+                        <nav id="navnav">
+                            <img src="./images/logo.png.png" class="logo" alt="apple logo">
+                            <ul>
+            
+                                        <li> <a href="store.html"> Store </a> </li>
+                                        <li> <a href="accessory.html"> Accessory </a> </li>
+                                        <li> <a href="tv.html"> Tv&Home </a> </li>
+                                  <li> <a href="contact.html"> Contact </a></li>
+                </ul>
+                        </nav>
+                  </header>
+                
+            <div class="header">
+              <h1 class="headerh1">Contact Us</h1><br>
+              <p class="headerp">Want to get in touch? We'd love to hear from you. Here is how you can reach us...</p>
+            </div> 
+
+           <iframe  class="map" style="margin-top: 15em; margin-bottom:5em;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13246.727075853481!2d35.52251479218749!3d33.897848800000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f17eb1b5d596b%3A0x16fc569f1a06773c!2sTalaco%20MacRoom!5e0!3m2!1sar!2slb!4v1677340038438!5m2!1sar!2slb" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe>
+
+        <div class="container">
+           <div class="content">
+             <div class="content-form"><br>
+                
+                <section>
+                    <h4><br>
+                        <i class=" icon fa fa-map-marker" aria-hidden="true"></i>
+                        <span>Address</span>
+                    </h4>
+                    <p>Downtown, Waygand Street, Beirut, Lebanon </p>
+                </section>
+                <section>
+                    <h4><br>
+                        <i class="icon fa fa-phone " aria-hidden="true"></i>
+                        <span> Phone number</span>
+                    </h4>
+                    <p> <a href="tel:+9611966810"> 01 966 810 </a></p>
+                </section>
+                <section>
+                    <h4><br>
+                        <i class="icon fa fa-envelope-open" aria-hidden="true"></i>
+                        <span>E-mail</span>
+                    </h4>
+                    <p><a href="mailto: apple.lebb@gmail.com">Apple_leb</a></p>
+                </section>
+             </div>
+           </div>
+
+        
+
+        <div class="contact-form">
+
+          <form  action="https://formsubmit.co/apple.lebb@gmail.com" method="POST" class="form">
+            <div class="input-container">
+               <input type="text" id="fullname" placeholder="Full Name" name="fullname" required>
+               <i class="icon fa fa-user-circle"></i></div>
+               <div id="fullname-error" class="error"></div>
+            
+            
+            <div class="input-container">
+            <input type="email" placeholder="Email Adress" id="email" name="email" required >
+            <i class="icon fa fa-envelope"></i></div>
+            <div id="email-error" class="error"></div>
+            
+
+            <div class="input-container">
+            <input id="message" placeholder="Enter you message..." name="message"  required>
+            <i class="icon fa fa-commenting"></i></div>
+            <div id="message-error" class="error"></div>
+            
+
+            <input type="submit" class="submit" value="Submit" onclick="validateForm()" />
+        </form>
+
+        <script>
+            function validateForm() {
+                const form = document.getElementById("contact-form");
+                const fullname = document.getElementById("fullname");
+                const email = document.getElementById("email");
+                const message = document.getElementById("message");
+                const fullnameError = document.getElementById("fullname-error");
+                const emailError = document.getElementById("email-error");
+                const messageError = document.getElementById("message-error");
+
+                
+                fullnameError.textContent = "";
+                emailError.textContent = "";
+                messageError.textContent = "";
+
+                let hasErrors = false;
+                if (fullname.value.trim() === "") {
+                    fullnameError.textContent = "Enter your fullname.";
+                    hasErrors = true;
+                }
+                if (email.value.trim() === "") {
+                    emailError.textContent = "Enter your email address.";
+                    hasErrors = true;
+                } else if (!isValidEmail(email.value)) {
+                    emailError.textContent = "Invalid email format.";
+                    hasErrors = true;
+                }
+                if (message.value.trim() === "") {
+                    messageError.textContent = "Enter the message you like to send.";
+                    hasErrors = true;
+                }
+                return true;
+            }
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+        </script>
+        </div>
+        
+        <div class="media">
+               <li> <a href="https://www.facebook.com/apple/"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+               <li><a href="https://www.instagram.com/apple/?next=%2F"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+               <li><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></li>
+               <li><a href="https://twitter.com/Apple"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a></li>
+           </div>  
+        </div>
+     </main>
+    <div class="line"></div>
+    <footer class="footer">
+        <div class="rowf">
+           <div class="colf">
+               <h4>Company</h4>
+               <ul class="ulf">
+                   <li> <a href="sirves.html"> Terms of service </a> </li>
+                   <li> <a href="policy.html"> Privacy policy </a> </li>
+               </ul>
+           </div>
+           <div class="colf">
+               <h4>Get Help</h4>
+               <ul class="ulf">
+                   <li> <a href="FAQ.html"> FAQ </a> </li>
+                   <li> <a href="termsofuse.html"> Terms of use</a> </li>
+                   <li> <a href="payment.html"> Payment method </a> </li>
+                
+               </ul>
+           </div>
+           <div class="colf">
+               <h4>Follow Us</h4>
+                   <div class="socailinks">
+                   <a href="https://www.facebook.com/apple/"> <i class="fa fa-facebook-square fa-2x" aria-hidden="true"> </i> </a> 
+                   <a href="https://www.instagram.com/apple/?next=%2F"> <i class="fa fa-instagram fa-2x" aria-hidden="true"> </i> </a>
+                   <a href="https://twitter.com/Apple"> <i class="fa fa-twitter-square fa-2x" aria-hidden="true"> </i> </a>
+                   </div>
+           </div>
+        </div>
+      <div class="copyright">
+        <img class="footerimg" src="./images/logogrey.png">
+       <p>Copyright © 2023 Apple Inc. All rights reserved.</p>
+      </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+    <script>
+        let mybutton = document.getElementById("myBtn");
+        window.onscroll=function() {scrollFunction()};
+    function scrollFunction() {
+        if(document.body.scrollTop>20||document.documentElement.scrollTop>20) 
+        {
+           mybutton.style.display="block";
+    } 
+        else{
+            mybutton.style.display="none";
+    }
+    }
+    function topFunction() {
+         document.body.scrollTop=0;
+         document.documentElement.scrollTop=0;
+    }
+    </script>
+    </div>
+    </footer>
+    </body>
+</html>
